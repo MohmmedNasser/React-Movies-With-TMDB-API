@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 const Navbar = () => {
     return (
         <>
-            <header className="flex items-center relative">
+            <header className="flex items-center absolute top-0 w-full z-10 py-5">
                 <div className="container">
-                    <div className="flex items-center justify-between py-4">
+                    <div className="flex items-center justify-between">
                         <div>
                             <Link to="/" className="flex items-center gap-2">
                                 <img
@@ -19,7 +19,8 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </div>
-                        <nav className="absolute left-1/2 top-[21px] -translate-x-1/2 z-10">
+                        {/* absolute left-1/2 top-[21px] -translate-x-1/2 z-10 */}
+                        <nav className="">
                             <ul className="flex items-center gap-5 text-sm">
                                 <li>
                                     <NavLink
@@ -65,6 +66,7 @@ const Navbar = () => {
                                         TV Shows
                                     </NavLink>
                                 </li>
+                                {/* People */}
                             </ul>
                         </nav>
                         <div>

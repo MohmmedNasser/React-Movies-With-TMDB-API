@@ -3,12 +3,12 @@ import { fetchTrinding } from "@/services/api";
 import { useEffect, useState } from "react";
 import Hero from "@/components/Sections/Hero";
 import Card from "@/components/Card";
-import type { Movies } from "@/types/movies";
+import type { MoviesCard } from "@/types/movies";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Home = () => {
-    const [data, setData] = useState<Movies[]>([]);
+    const [data, setData] = useState<MoviesCard[]>([]);
     const [loading, setLoading] = useState(true);
     const [timeWindow, setTimeWindow] = useState("day");
 
@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <section>
+            <section className="mt-8">
                 <div className="container">
                     <div className="flex items-center justify-between mb-5 ">
                         <Heading text="Trinding" />
@@ -63,7 +63,7 @@ const Home = () => {
                                 />
                             ))}
                         {data &&
-                            data.map((item: Movies) => (
+                            data.map((item: MoviesCard) => (
                                 <Card item={item} key={item.id} />
                             ))}
                     </div>

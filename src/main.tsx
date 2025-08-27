@@ -7,6 +7,8 @@ import Movies from "./views/Movies/index.tsx";
 import Shows from "./views/Shows/index.tsx";
 import Search from "./views/Search/index.tsx";
 import { createRoot } from "react-dom/client";
+import { GenresProvider } from "./context/GenresProvider.tsx";
+import DetailsPage from "./views/DetailsPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -29,12 +31,18 @@ const router = createBrowserRouter([
                 path: "/search",
                 element: <Search />,
             },
+            {
+                path: "/details/:type/:id",
+                element: <DetailsPage />,
+            },
         ],
     },
 ]);
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <RouterProvider router={router} />
+        <GenresProvider>
+            <RouterProvider router={router} />
+        </GenresProvider>
     </StrictMode>
 );
