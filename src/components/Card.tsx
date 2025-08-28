@@ -36,7 +36,9 @@ const Card = ({ item, type }: CardProps) => {
                     <p className=" text-white text-12 font-semibold flex items-center gap-1">
                         <Star className="text-amber-400 w-4 h-4" />
                         <span className="">
-                            {item?.vote_average.toFixed(1)}
+                            {item?.vote_average
+                                ? item?.vote_average.toFixed(1)
+                                : "0"}
                         </span>
                     </p>
                     <span className="w-[1px] h-[15px] bg-neutral-500"></span>

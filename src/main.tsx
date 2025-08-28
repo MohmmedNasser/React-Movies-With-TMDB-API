@@ -9,6 +9,9 @@ import Search from "./views/Search/index.tsx";
 import { createRoot } from "react-dom/client";
 import { GenresProvider } from "./context/GenresProvider.tsx";
 import DetailsPage from "./views/DetailsPage.tsx";
+import { AuthProvider } from "./context/AuthProvider.tsx";
+import Watchlist from "./views/Watchlist/index.tsx";
+import ProtectedRoute from "./auth/ProtectedRoute.tsx";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
                 path: "/details/:type/:id",
                 element: <DetailsPage />,
             },
+            {
+                path: "/watchlist",
+                element: (
+                    <ProtectedRoute>
+                        <Watchlist />
+                    </ProtectedRoute>
+                ),
+            },
         ],
     },
 ]);
@@ -42,7 +53,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <GenresProvider>
-            <RouterProvider router={router} />
+            <AuthProvider>
+                <RouterProvider router={router} />
+            </AuthProvider>
         </GenresProvider>
     </StrictMode>
 );

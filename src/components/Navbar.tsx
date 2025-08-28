@@ -1,7 +1,32 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
+import { Search } from "lucide-react";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
+import { useAuth } from "@/hooks/useAuth";
 
 const Navbar = () => {
+    const { user, signInWithGoogle, logout } = useAuth();
+
+    const navigate = useNavigate();
+
+    const handleGoogleLogin = async () => {
+        try {
+            await signInWithGoogle();
+        } catch (err) {
+            console.log("errr", err);
+        }
+    };
+
+    console.log(user);
+
     return (
         <>
             <header className="flex items-center absolute top-0 w-full z-10 py-5">
@@ -26,9 +51,9 @@ const Navbar = () => {
                                     <NavLink
                                         to="/"
                                         className={({ isActive }) =>
-                                            `text-white transition hover:text-white/80 px-3 py-2 rounded-full ${
+                                            `text-white transition px-3 py-2 rounded-full relative  before:absolute before:start-0 before:-bottom-[1px] before:w-full before:bg-transparent before:h-[10%] before:-z-10 before:rounded-sm before:transition-all before:duration-400 hover:before:transition-all hover:before:bg-primary! ${
                                                 isActive
-                                                    ? " bg-primary !hover:text-white"
+                                                    ? "before:bg-primary! hover:before:h-full! before:h-[50%]!"
                                                     : ""
                                             }`
                                         }
@@ -41,9 +66,9 @@ const Navbar = () => {
                                     <NavLink
                                         to="/movies"
                                         className={({ isActive }) =>
-                                            `text-white transition hover:text-white/80 px-3 py-2 rounded-full ${
+                                            `text-white transition px-3 py-2 rounded-full relative  before:absolute before:start-0 before:-bottom-[1px] before:w-full before:bg-transparent before:h-[10%] before:-z-10 before:rounded-sm before:transition-all before:duration-400 hover:before:transition-all hover:before:bg-primary! ${
                                                 isActive
-                                                    ? " bg-primary !hover:text-white"
+                                                    ? "before:bg-primary! hover:before:h-full! before:h-[50%]!"
                                                     : ""
                                             }`
                                         }
@@ -56,9 +81,9 @@ const Navbar = () => {
                                     <NavLink
                                         to="/shows"
                                         className={({ isActive }) =>
-                                            `text-white transition hover:text-white/80 px-3 py-2 rounded-full ${
+                                            `text-white transition px-3 py-2 rounded-full relative  before:absolute before:start-0 before:-bottom-[1px] before:w-full before:bg-transparent before:h-[10%] before:-z-10 before:rounded-sm before:transition-all before:duration-400 hover:before:transition-all hover:before:bg-primary! ${
                                                 isActive
-                                                    ? " bg-primary !hover:text-white"
+                                                    ? "before:bg-primary! hover:before:h-full! before:h-[50%]!"
                                                     : ""
                                             }`
                                         }
@@ -69,13 +94,47 @@ const Navbar = () => {
                                 {/* People */}
                             </ul>
                         </nav>
-                        <div>
-                            <Button
-                                variant="outline"
-                                className="rounded-full cursor-pointer"
-                            >
-                                Sign In
-                            </Button>
+                        <div className="flex items-center gap-5">
+                            <Link to="/search">
+                                <Search className="size-5" />
+                            </Link>
+
+                            {user && (
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger>
+                                        <Avatar>
+                                            <AvatarImage
+                                                src={
+                                                    user?.photoURL ??
+                                                    "/default-avatar.png"
+                                                }
+                                            />
+                                        </Avatar>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className="!mt-2">
+                                        <DropdownMenuItem
+                                            onClick={() =>
+                                                navigate("/watchlist")
+                                            }
+                                        >
+                                            Watchlist
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem onClick={logout}>
+                                            Logout
+                                        </DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                            )}
+
+                            {!user && (
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full cursor-pointer"
+                                    onClick={handleGoogleLogin}
+                                >
+                                    Sign In
+                                </Button>
+                            )}
                         </div>
                     </div>
                 </div>
