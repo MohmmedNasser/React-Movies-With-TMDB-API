@@ -11,9 +11,11 @@ const Card = ({ item, type }: CardProps) => {
     return (
         <Link
             to={
-                type
-                    ? `/details/${type}/${item?.id}`
-                    : `/details/${item?.media_type}/${item?.id}`
+                item?.media_type
+                    ? `/details/${item?.media_type}/${item?.id}`
+                    : type == "movie"
+                    ? `/details/movie/${item?.id}`
+                    : `/details/tv/${item?.id}`
             }
             className="relative h-[350px] rounded-xl overflow-hidden cs-card transition-transform duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -47,7 +49,13 @@ const Card = ({ item, type }: CardProps) => {
                             item?.release_date || item?.first_air_date
                         ).getFullYear() || "N/A"}
                         <span className="text-neutral-500">&#x2022;</span>
-                        <span>{item?.media_type || "movie"}</span>
+                        <span>
+                            {item?.media_type
+                                ? item?.media_type
+                                : type == "movie"
+                                ? "movie"
+                                : "tv"}
+                        </span>
                     </p>
                 </div>
             </div>

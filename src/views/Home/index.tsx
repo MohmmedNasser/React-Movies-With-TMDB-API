@@ -16,7 +16,7 @@ const Home = () => {
         setLoading(true);
         fetchTrinding("all", timeWindow)
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 setData(res);
             })
             .catch((err) => {

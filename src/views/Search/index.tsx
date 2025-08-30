@@ -23,7 +23,7 @@ const Search = () => {
         }
         searchData(debouncedSearch, activePage)
             .then((res) => {
-                console.log(res, "res");
+                // console.log(res, "res");
                 setData(res?.results);
                 setActivePage(res?.page);
                 setTotalPages(res?.total_pages);
@@ -36,7 +36,7 @@ const Search = () => {
             });
     }, [debouncedSearch, activePage]);
 
-    console.log(data);
+    // console.log(data);
 
     return (
         <section className="pt-30 min-h-[70vh]">
@@ -88,7 +88,7 @@ const Search = () => {
                         {data.length > 0 &&
                             !isLoading &&
                             data.map((item: MoviesCard) => (
-                                <Card item={item} key={item.id} type="movie" />
+                                <Card item={item} key={item.id} />
                             ))}
                     </div>
                 </div>

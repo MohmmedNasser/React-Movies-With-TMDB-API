@@ -126,7 +126,15 @@ export type Video = {
     id: string;              // ID داخلي من TMDB
 };
 
-
+export type WatchListData = {
+    id: string,
+    title: string,
+    type: string,
+    poster_path: string,
+    release_date: string,
+    vote_average: number,
+    overview: string,
+}
 
 
 type Episode = {

@@ -35,11 +35,7 @@ const Recommend = ({
                     {recommend &&
                         !loading &&
                         recommend.map((item: MoviesCard) => (
-                            <Card
-                                item={item}
-                                key={item.id}
-                                type={type ?? "movie"}
-                            />
+                            <Card item={item} key={item.id} />
                         ))}
                 </div>
             </div>

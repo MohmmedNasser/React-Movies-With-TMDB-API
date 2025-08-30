@@ -24,7 +24,7 @@ const Shows = () => {
         setIsLoading(true);
         fetchTvSeries(activePage, sortBy)
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 setShows(res?.results);
                 setActivePage(res?.page);
                 setTotalPages(res?.total_pages);
@@ -37,7 +37,7 @@ const Shows = () => {
             });
     }, [activePage, sortBy]);
 
-    console.log(shows);
+    // console.log(shows);
 
     return (
         <section className="pt-30">
