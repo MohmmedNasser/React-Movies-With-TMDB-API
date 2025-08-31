@@ -1,12 +1,22 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Search } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
@@ -24,7 +34,6 @@ const Navbar = () => {
             console.log("errr", err);
         }
     };
-
     // console.log(user);
 
     return (
@@ -44,9 +53,8 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </div>
-                        {/* absolute left-1/2 top-[21px] -translate-x-1/2 z-10 */}
-                        <nav className="">
-                            <ul className="flex items-center gap-5 text-sm">
+                        <nav className="hidden md:block">
+                            <ul className="flex items-center gap-3 text-sm">
                                 <li>
                                     <NavLink
                                         to="/"
@@ -91,7 +99,21 @@ const Navbar = () => {
                                         TV Shows
                                     </NavLink>
                                 </li>
-                                {/* People */}
+                                <li className="text-neutral-600">|</li>
+                                <li>
+                                    <NavLink
+                                        to="/people"
+                                        className={({ isActive }) =>
+                                            `text-white transition px-3 py-2 rounded-full relative  before:absolute before:start-0 before:-bottom-[1px] before:w-full before:bg-transparent before:h-[10%] before:-z-10 before:rounded-sm before:transition-all before:duration-400 hover:before:transition-all hover:before:bg-primary! ${
+                                                isActive
+                                                    ? "before:bg-primary! hover:before:h-full! before:h-[50%]!"
+                                                    : ""
+                                            }`
+                                        }
+                                    >
+                                        People
+                                    </NavLink>
+                                </li>
                             </ul>
                         </nav>
                         <div className="flex items-center gap-5">
@@ -135,6 +157,76 @@ const Navbar = () => {
                                     Sign In
                                 </Button>
                             )}
+
+                            <Sheet>
+                                <SheetTrigger asChild>
+                                    <Button
+                                        variant="link"
+                                        className="!p-0 flex md:hidden"
+                                    >
+                                        <Menu className="size-6 text-white/90" />
+                                    </Button>
+                                </SheetTrigger>
+                                <SheetContent>
+                                    <SheetHeader>
+                                        <SheetTitle></SheetTitle>
+                                        <SheetDescription asChild>
+                                            <ul className="flex flex-col items-start space-y-5 mt-10">
+                                                <li>
+                                                    <SheetClose asChild>
+                                                        <Link
+                                                            to="/"
+                                                            className="text-lg text-white"
+                                                        >
+                                                            Home
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                                <li>
+                                                    <SheetClose asChild>
+                                                        <Link
+                                                            to="/movies"
+                                                            className="text-lg text-white"
+                                                        >
+                                                            Movies
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                                <li>
+                                                    <SheetClose asChild>
+                                                        <Link
+                                                            to="/shows"
+                                                            className="text-lg text-white"
+                                                        >
+                                                            TV Shows
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                                <li>
+                                                    <SheetClose asChild>
+                                                        <Link
+                                                            to="/movies"
+                                                            className="text-lg text-white"
+                                                        >
+                                                            Movies
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                                <li>
+                                                    <SheetClose asChild>
+                                                        <Link
+                                                            to="/people"
+                                                            className="text-lg text-white"
+                                                        >
+                                                            People
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                            </ul>
+                                        </SheetDescription>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
                         </div>
                     </div>
                 </div>

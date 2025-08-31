@@ -56,6 +56,7 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                         {loading &&
+                            data.length !== 0 &&
                             Array.from({ length: 20 }).map((_, index) => (
                                 <Skeleton
                                     key={index}
@@ -63,6 +64,7 @@ const Home = () => {
                                 />
                             ))}
                         {data &&
+                            !loading &&
                             data.map((item: MoviesCard) => (
                                 <Card item={item} key={item.id} />
                             ))}

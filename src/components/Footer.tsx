@@ -1,11 +1,15 @@
 import { Github, Linkedin } from "lucide-react";
 import ReactLogo from "../assets/react.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     return (
-        <footer className="pt-15 pb-5 mt-15 bg-neutral-900">
+        <footer className="pt-10 md:pt-15 pb-5 mt-15 bg-neutral-900">
             <div className="container">
-                <div className="flex items-start gap-2 flex-wrap justify-between">
+                <div className="flex items-start gap-8 md:gap-2 flex-col md:flex-row justify-between">
                     <div>
                         <div className="flex items-center gap-2 mb-5">
                             <img
@@ -46,8 +50,46 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
+                    <ul className="flex items-center space-x-4 lg:space-x-10 text-sm md:self-center">
+                        <li>
+                            <Link
+                                to="/"
+                                className="hover:text-primary transition duration-300"
+                                onClick={scrollTop}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/movies"
+                                className="hover:text-primary transition duration-300"
+                                onClick={scrollTop}
+                            >
+                                Movies
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/shows"
+                                className="hover:text-primary transition duration-300"
+                                onClick={scrollTop}
+                            >
+                                TV Shows
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/people"
+                                className="hover:text-primary transition duration-300"
+                                onClick={scrollTop}
+                            >
+                                People
+                            </Link>
+                        </li>
+                    </ul>
                     <div>
-                        <p className="my-5 flex items-center gap-3 w-max text-12 text-neutral-400">
+                        <p className="mb-5 flex items-center gap-3 w-max text-12 text-neutral-400">
                             <span>Made with</span>
                             <a href="https://react.dev/" target="_blank">
                                 <img
@@ -58,8 +100,7 @@ const Footer = () => {
                                 />
                             </a>
                         </p>
-
-                        <p className="my-5 flex items-center gap-3 w-max text-12 text-neutral-400">
+                        <p className="flex items-center gap-3 w-max text-12 text-neutral-400">
                             <span>Data provided by</span>
                             <a
                                 href="https://www.themoviedb.org/"
@@ -75,7 +116,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <p className="text-12 text-center text-neutral-400 mt-5">
+                <p className="text-12 text-center text-neutral-400 mt-8 md:mt-5">
                     This project uses the TMDB API but is not endorsed or
                     certified by TMDB.
                 </p>

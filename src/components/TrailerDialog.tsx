@@ -27,7 +27,7 @@ const TrailerDialog = ({ trailer }: { trailer: Video | null }) => {
                     <span>Watch Trailer</span>
                 </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent className="!max-w-3xl !min-h-[400px]">
+            <AlertDialogContent className=" md:!max-w-3xl !min-h-[400px]">
                 <AlertDialogCancel className="absolute -end-2 -top-2 cursor-pointer text-gray-200 border border-white bg-neutral-900 hover:bg-neutral-700 hover:border-gray-100 transition rounded-full p-1">
                     <X className="size-4 text-white" />
                 </AlertDialogCancel>

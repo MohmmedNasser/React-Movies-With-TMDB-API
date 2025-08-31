@@ -60,6 +60,11 @@ export const fetchTvSeries = async (page: number, sortBy: string) => {
     return data;
 }
 
+export const fetchPeople = async (page: number) => {
+    const { data } = await axios.get(`${BASE_URL}/person/popular?api_key=${API_KEY}&page=${page}`);
+    return data;
+}
+
 // SEARCH
 export const searchData = async (query: string, page: number) => {
     const { data } = await axios.get(`${BASE_URL}/search/multi?api_key=${API_KEY}&query=${query}&page=${page}`);

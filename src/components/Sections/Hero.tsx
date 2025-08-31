@@ -38,7 +38,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="h-screen w-full hero-section">
+        <section className="h-[80vh] md:h-screen w-full hero-section">
             {loading && <Skeleton className="w-full h-screen rounded-lg" />}
             {dateHero.length > 0 && !loading && (
                 <Carousel
@@ -59,7 +59,7 @@ const Hero = () => {
                                     <img
                                         src={`${originalImagePath}${item.backdrop_path}`}
                                         alt={item.title}
-                                        className="w-full h-screen object-cover object-top"
+                                        className="w-full h-[80vh] md:h-screen object-cover object-top"
                                         loading="lazy"
                                     />
                                 )}
@@ -75,7 +75,7 @@ const Hero = () => {
                                         <p className="text-2xl md:text-5xl font-bold text-white">
                                             {item.title || item.name}
                                         </p>
-                                        <div className="flex items-center gap-2 mt-2">
+                                        <div className="flex items-center flex-wrap gap-4 md:gap-2">
                                             <p className="text-sm flex items-center gap-1 text-white">
                                                 <CalendarDays className="size-5" />
                                                 <span className="text-md mt-1">
@@ -99,7 +99,7 @@ const Hero = () => {
                                             <span className="text-white">
                                                 &#x2022;
                                             </span>
-                                            <p className="flex items-center gap-1 text-sm">
+                                            <p className="flex items-center gap-1 flex-wrap text-sm">
                                                 {(item.media_type === "movie" ||
                                                     item.media_type === "tv") &&
                                                     getGenreNames(

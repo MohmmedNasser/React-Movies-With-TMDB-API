@@ -78,7 +78,9 @@ const Search = () => {
                     )}
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-5">
-                        {isLoading &&
+                        {data &&
+                            data.length !== 0 &&
+                            isLoading &&
                             Array.from({ length: 20 }).map((_, index) => (
                                 <Skeleton
                                     key={index}

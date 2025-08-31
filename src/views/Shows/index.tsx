@@ -42,7 +42,7 @@ const Shows = () => {
     return (
         <section className="pt-30">
             <div className="container">
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between flex-wrap mb-5">
                     <Heading text="Discover TV Shows" />
                     <Select
                         onValueChange={(value) => {

@@ -17,7 +17,7 @@ const Card = ({ item, type }: CardProps) => {
                     ? `/details/movie/${item?.id}`
                     : `/details/tv/${item?.id}`
             }
-            className="relative h-[350px] rounded-xl overflow-hidden cs-card transition-transform duration-300"
+            className="relative h-[280px] sm:h-[350px]  rounded-xl overflow-hidden cs-card transition-transform duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
             <img
@@ -27,7 +27,7 @@ const Card = ({ item, type }: CardProps) => {
                         : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
                 }
                 alt={item?.title || item?.name}
-                className="w-full h-[350px] object-cover rounded-lg transition-transform duration-300"
+                className="w-full h-[280px] sm:h-[350px] object-cover rounded-lg transition-transform duration-300"
                 loading="lazy"
             />
             <div className="absolute z-2 bottom-0 start-0 w-full p-3">

@@ -42,7 +42,7 @@ const Movies = () => {
     return (
         <section className="pt-30">
             <div className="container">
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between flex-wrap mb-5">
                     <Heading text="Discover Movies" />
                     <Select
                         onValueChange={(value) => {
@@ -66,6 +66,7 @@ const Movies = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-5">
                     {isLoading &&
+                        movies.length !== 0 &&
                         Array.from({ length: 20 }).map((_, index) => (
                             <Skeleton
                                 key={index}
@@ -73,6 +74,7 @@ const Movies = () => {
                             />
                         ))}
                     {movies &&
+                        !isLoading &&
                         movies.map((item: MoviesCard) => (
                             <Card item={item} key={item.id} type="movie" />
                         ))}

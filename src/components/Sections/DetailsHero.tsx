@@ -98,7 +98,7 @@ const DetailsHero = ({ details, type, trailer }: DetailsHeroProps) => {
 
     return (
         <section
-            className="min-h-screen 2xl:min-h-[80vh] w-full bg-cover bg-no-repeat bg-center details-hero relative z-1 py-5"
+            className="min-h-screen xl:min-h-[60vh] w-full bg-cover bg-no-repeat bg-center details-hero relative z-1 py-5"
             style={{
                 backgroundImage: `url(${originalImagePath}${details?.backdrop_path})`,
             }}
@@ -114,8 +114,8 @@ const DetailsHero = ({ details, type, trailer }: DetailsHeroProps) => {
                         <span>Back</span>
                     </Button>
 
-                    <div className="flex items-start gap-5 md:flex-wrap lg:flex-nowrap mt-5 px-5">
-                        <div className="w-[270px] h-[400px] rounded-lg overflow-hidden shrink-0">
+                    <div className="flex items-start gap-5 flex-col lg:flex-row mt-5 px-5 pb-5 md:pb-0">
+                        <div className="w-full sm:w-[270px] h-[350px] sm:h-[400px] rounded-lg overflow-hidden shrink-0">
                             <img
                                 src={`${imagePath}${details?.poster_path}`}
                                 alt={title}
@@ -124,8 +124,14 @@ const DetailsHero = ({ details, type, trailer }: DetailsHeroProps) => {
                             />
                         </div>
                         <div className="max-w-2xl">
-                            <h1 className="text-4xl font-semibold mb-3 text-white leading-12">
-                                {title}
+                            <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-3 text-white lg:leading-12">
+                                <span>{title}</span>
+                                <Badge
+                                    variant="secondary"
+                                    className="capitalize ms-3 bg-neutral-700!"
+                                >
+                                    {type}
+                                </Badge>
                             </h1>
                             <div className="flex items-center gap-2 text-white/80 text-sm mb-5">
                                 <div className="flex items-center gap-1">
@@ -161,8 +167,8 @@ const DetailsHero = ({ details, type, trailer }: DetailsHeroProps) => {
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4">
-                                <div className="size-15">
+                            <div className="flex items-center flex-wrap gap-4">
+                                <div className="size-13 lg:size-15">
                                     <CircularProgressbar
                                         value={Number(rating)}
                                         text={`${rating}%`}

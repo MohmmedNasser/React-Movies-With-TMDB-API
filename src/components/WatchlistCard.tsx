@@ -32,7 +32,7 @@ const WatchlistCard = ({ item, type, setWatchlist }: WatchlistCardProps) => {
     };
 
     return (
-        <div className="flex items-start gap-3">
+        <div className="flex flex-col md:flex-row items-start gap-3">
             <img
                 src={
                     item?.poster_path
@@ -40,11 +40,11 @@ const WatchlistCard = ({ item, type, setWatchlist }: WatchlistCardProps) => {
                         : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
                 }
                 alt={item?.title}
-                className="w-[180px] h-[250px] object-cover object-top rounded-lg shrink-0"
+                className="w-full md:w-[180px] h-[300px] md:h-[250px] object-cover object-top rounded-lg shrink-0"
                 loading="lazy"
             />
             <div className="pt-2 grow">
-                <div className="flex items-center gap-2 justify-between">
+                <div className="flex items-start md:items-center gap-2 justify-between">
                     <Link
                         to={`/details/${type}/${item?.id}`}
                         onClick={() =>

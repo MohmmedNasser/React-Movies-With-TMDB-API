@@ -25,7 +25,9 @@ const Recommend = ({
                 )}
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                    {loading &&
+                    {recommend &&
+                        recommend.length !== 0 &&
+                        loading &&
                         Array.from({ length: 10 }).map((_, index) => (
                             <Skeleton
                                 key={index}
@@ -35,7 +37,7 @@ const Recommend = ({
                     {recommend &&
                         !loading &&
                         recommend.map((item: MoviesCard) => (
-                            <Card item={item} key={item.id} />
+                            <Card item={item} key={item.id} type={type} />
                         ))}
                 </div>
             </div>

@@ -136,6 +136,32 @@ export type WatchListData = {
     overview: string,
 }
 
+export interface KnownFor {
+    id: number;
+    title?: string; // present if it's a movie
+    name?: string; // present if it's a TV show
+    overview: string;
+    poster_path: string | null;
+    release_date?: string;
+    first_air_date?: string;
+    media_type: "movie" | "tv";
+    vote_average: number;
+    [key: string]: any; // fallback for extra fields
+}
+
+
+export interface Person {
+    adult: boolean;
+    gender: number; // 0 = Not specified, 1 = Female, 2 = Male, 3 = Non-binary
+    id: number;
+    known_for: KnownFor[];
+    known_for_department: string;
+    name: string;
+    original_name: string;
+    popularity: number;
+    profile_path: string | null;
+}
+
 
 type Episode = {
     id: number;

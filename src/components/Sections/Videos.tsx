@@ -33,7 +33,7 @@ const Videos = ({ videos }: { videos: Video[] }) => {
                             {videos.map((item, index) => (
                                 <CarouselItem
                                     key={index}
-                                    className="pl-1 basis-1/2 md:basis-1/3"
+                                    className="pl-1 basis-full md:basis-1/2 lg:basis-1/3"
                                 >
                                     <div className="p-1">
                                         <div className="flex flex-col justify-center gap-2 bg-neutral-900 p-3 rounded-md">
@@ -43,8 +43,8 @@ const Videos = ({ videos }: { videos: Video[] }) => {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="cursor-pointer" />
-                        <CarouselNext className="cursor-pointer" />
+                        <CarouselPrevious className="cursor-pointer hidden lg:block" />
+                        <CarouselNext className="cursor-pointer hidden lg:block" />
                     </Carousel>
                 )}
             </div>

@@ -12,6 +12,7 @@ import DetailsPage from "./views/DetailsPage.tsx";
 import { AuthProvider } from "./context/AuthProvider.tsx";
 import Watchlist from "./views/Watchlist/index.tsx";
 import ProtectedRoute from "./auth/ProtectedRoute.tsx";
+import People from "./views/People/index.tsx";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/shows",
                 element: <Shows />,
+            },
+            {
+                path: "/people",
+                element: <People />,
             },
             {
                 path: "/search",
