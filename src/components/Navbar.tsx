@@ -205,16 +205,6 @@ const Navbar = () => {
                                                 <li>
                                                     <SheetClose asChild>
                                                         <Link
-                                                            to="/movies"
-                                                            className="text-lg text-white"
-                                                        >
-                                                            Movies
-                                                        </Link>
-                                                    </SheetClose>
-                                                </li>
-                                                <li>
-                                                    <SheetClose asChild>
-                                                        <Link
                                                             to="/people"
                                                             className="text-lg text-white"
                                                         >

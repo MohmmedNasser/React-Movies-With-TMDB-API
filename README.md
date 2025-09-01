@@ -68,6 +68,10 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
     ![Trending People](https://i.postimg.cc/nVDmrKfH/screencapture-localhost-5173-people-2025-09-01-14-24-10.png)
 
+-   **People Detail Page**: Displays detailed information about a specific person.
+
+    ![People Detail Page](https://i.postimg.cc/52m2V4y8/screencapture-localhost-5174-people-details-18897-2025-09-01-15-47-32.png)
+
 -   **Search Results**: Shows search results for a query like "Mission".
 
     ![Search Results](https://i.postimg.cc/xdpmJtdd/screencapture-localhost-5173-search-2025-09-01-14-31-19.png)
