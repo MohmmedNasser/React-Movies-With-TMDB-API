@@ -80,7 +80,7 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
 This project uses the TMDB API but is not endorsed or certified by TMDB. All data provided is sourced from TMDB.
 
-## 👩‍💻 Author
+## Author
 
 -   Mohammed Nasser - [Mohammed Nasser](https://mohnasser.vercel.app/) - [GitHub Profile](https://github.com/MohmmedNasser) - [Linkedin Profile](https://www.linkedin.com/in/mohammed-nasser93/)
 
