@@ -48,17 +48,9 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
 ## Screenshots
 
--   **Watchlist**: Displays user's saved movies and shows.
+-   **Home**: Displays Trinding movies and TV series.
 
-    ![Watchlist](https://i.postimg.cc/LHpgQMpV/screencapture-localhost-5173-2025-09-01-14-23-50.png)
-
--   **Search Results**: Shows search results for a query like "Mission".
-
-    ![Search Results](https://i.postimg.cc/xdpmJtdd/screencapture-localhost-5173-search-2025-09-01-14-31-19.png)
-
--   **Trending People**: Highlights popular actors and personalities.
-
-    ![Trending People](https://i.postimg.cc/nVDmrKfH/screencapture-localhost-5173-people-2025-09-01-14-24-10.png)
+    ![Home](https://i.postimg.cc/bdfyKjV5/screencapture-localhost-5173-watchlist-2025-09-01-14-24-36.png)
 
 -   **Discover Movies**: Showcases a grid of popular movies.
 
@@ -72,13 +64,25 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
     ![Movie Detail Page](https://i.postimg.cc/cHqsbn9m/screencapture-localhost-5173-details-movie-575265-2025-09-01-14-27-22.png)
 
+-   **Trending People**: Highlights popular actors and personalities.
+
+    ![Trending People](https://i.postimg.cc/nVDmrKfH/screencapture-localhost-5173-people-2025-09-01-14-24-10.png)
+
+-   **Search Results**: Shows search results for a query like "Mission".
+
+    ![Search Results](https://i.postimg.cc/xdpmJtdd/screencapture-localhost-5173-search-2025-09-01-14-31-19.png)
+
+-   **Watchlist**: Displays user's saved movies and shows.
+
+    ![Watchlist](https://i.postimg.cc/bdfyKjV5/screencapture-localhost-5173-watchlist-2025-09-01-14-24-36.png)
+
 ## API Integration
 
 This project uses the TMDB API but is not endorsed or certified by TMDB. All data provided is sourced from TMDB.
 
 ## Author
 
--   Mohammed Nasser - [Your GitHub Profile](https://github.com/MohmmedNasser)
+-   [Mohammed Nasser](https://mohnasser.vercel.app/) - [GitHub Profile](https://github.com/MohmmedNasser)
 
 ## Acknowledgments
 
