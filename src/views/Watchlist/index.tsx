@@ -37,7 +37,7 @@ const Watchlist = () => {
                     <Heading text="Watchlist" />
                 </div>
 
-                {watchlist.length === 0 && watchlist.length !== 0 && (
+                {watchlist.length === 0 && (
                     <p className="text-center text-neutral-400 py-10">
                         Watchlist is empty
                     </p>
