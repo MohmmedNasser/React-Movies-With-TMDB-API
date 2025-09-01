@@ -49,7 +49,7 @@ const Card = ({ item, type }: CardProps) => {
                             item?.release_date || item?.first_air_date
                         ).getFullYear() || "N/A"}
                         <span className="text-neutral-500">&#x2022;</span>
-                        <span>
+                        <span className="capitalize">
                             {item?.media_type
                                 ? item?.media_type
                                 : type == "movie"

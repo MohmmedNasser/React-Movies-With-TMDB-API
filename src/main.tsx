@@ -13,6 +13,7 @@ import { AuthProvider } from "./context/AuthProvider.tsx";
 import Watchlist from "./views/Watchlist/index.tsx";
 import ProtectedRoute from "./auth/ProtectedRoute.tsx";
 import People from "./views/People/index.tsx";
+import PeopleDetails from "./views/People/details.tsx";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: "/people",
                 element: <People />,
+            },
+            {
+                path: "/people/details/:id",
+                element: <PeopleDetails />,
             },
             {
                 path: "/search",

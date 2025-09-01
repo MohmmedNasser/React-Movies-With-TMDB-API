@@ -65,6 +65,12 @@ export const fetchPeople = async (page: number) => {
     return data;
 }
 
+export const fetchPeopleMovie = async (id: number) => {
+    const { data } = await axios.get(`${BASE_URL}/person/${id}/movie_credits?api_key=${API_KEY}`);
+    return data;
+}
+
+
 // SEARCH
 export const searchData = async (query: string, page: number) => {
     const { data } = await axios.get(`${BASE_URL}/search/multi?api_key=${API_KEY}&query=${query}&page=${page}`);

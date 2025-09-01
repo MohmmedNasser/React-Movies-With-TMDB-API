@@ -146,9 +146,7 @@ export interface KnownFor {
     first_air_date?: string;
     media_type: "movie" | "tv";
     vote_average: number;
-    [key: string]: any; // fallback for extra fields
 }
-
 
 export interface Person {
     adult: boolean;
@@ -162,6 +160,42 @@ export interface Person {
     profile_path: string | null;
 }
 
+export interface PersonDetails {
+    adult: boolean;
+    also_known_as: string[];
+    biography: string;
+    birthday: string | null; // null if unknown
+    deathday: string | null; // null if still alive
+    gender: number; // 0 = Not specified, 1 = Female, 2 = Male, 3 = Non-binary
+    homepage: string | null;
+    id: number;
+    imdb_id: string | null;
+    known_for_department: string;
+    name: string;
+    place_of_birth: string | null;
+    popularity: number;
+    profile_path: string | null;
+}
+
+export interface MovieCastCredit {
+    adult: boolean;
+    backdrop_path: string | null;
+    character: string;
+    credit_id: string;
+    genre_ids: number[];
+    id: number;
+    order: number;
+    original_language: string;
+    original_title: string;
+    overview: string;
+    popularity: number;
+    poster_path: string | null;
+    release_date: string;
+    title: string;
+    video: boolean;
+    vote_average: number;
+    vote_count: number;
+}
 
 type Episode = {
     id: number;

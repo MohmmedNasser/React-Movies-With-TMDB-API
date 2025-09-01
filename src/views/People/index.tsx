@@ -50,7 +50,7 @@ const People = () => {
                         !isLoading &&
                         people.map((item) => (
                             <Link
-                                to="/"
+                                to={`/people/details/${item?.id}`}
                                 key={item.id}
                                 className="relative h-[280px] sm:h-[350px]  rounded-xl overflow-hidden cs-card transition-transform duration-300"
                             >
