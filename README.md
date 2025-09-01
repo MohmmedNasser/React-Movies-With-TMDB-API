@@ -50,7 +50,7 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
 -   **Home**: Displays Trinding movies and TV series.
 
-    ![Home](https://i.postimg.cc/bdfyKjV5/screencapture-localhost-5173-watchlist-2025-09-01-14-24-36.png)
+    ![Home](https://i.postimg.cc/LHpgQMpV/screencapture-localhost-5173-2025-09-01-14-23-50.png)
 
 -   **Discover Movies**: Showcases a grid of popular movies.
 
@@ -80,9 +80,9 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 
 This project uses the TMDB API but is not endorsed or certified by TMDB. All data provided is sourced from TMDB.
 
-## Author
+## 👩‍💻 Author
 
--   [Mohammed Nasser](https://mohnasser.vercel.app/) - [GitHub Profile](https://github.com/MohmmedNasser)
+-   Mohammed Nasser - [Mohammed Nasser](https://mohnasser.vercel.app/) - [GitHub Profile](https://github.com/MohmmedNasser) - [Linkedin Profile](https://www.linkedin.com/in/mohammed-nasser93/)
 
 ## Acknowledgments
 
