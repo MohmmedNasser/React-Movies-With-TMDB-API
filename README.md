@@ -49,11 +49,17 @@ Check out the live demo at [react-movies-tv.vercel.app](https://react-movies-tv.
 ## Screenshots
 
 -   **Watchlist**: Displays user's saved movies and shows.
+    (https://i.postimg.cc/LHpgQMpV/screencapture-localhost-5173-2025-09-01-14-23-50.png)
 -   **Search Results**: Shows search results for a query like "Mission".
+    (https://i.postimg.cc/xdpmJtdd/screencapture-localhost-5173-search-2025-09-01-14-31-19.png)
 -   **Trending People**: Highlights popular actors and personalities.
+    (https://i.postimg.cc/nVDmrKfH/screencapture-localhost-5173-people-2025-09-01-14-24-10.png)
 -   **Discover Movies**: Showcases a grid of popular movies.
+    (https://i.postimg.cc/3xBS65tb/screencapture-localhost-5173-movies-2025-09-01-14-23-59.png)
 -   **Discover TV Shows**: Displays a grid of popular TV series.
+    (https://i.postimg.cc/NFMP8N6P/screencapture-localhost-5173-shows-2025-09-01-14-24-04.png)
 -   **Movie Detail Page**: Provides detailed information and related content for a specific movie.
+    (https://i.postimg.cc/cHqsbn9m/screencapture-localhost-5173-details-movie-575265-2025-09-01-14-27-22.png)
 
 ## API Integration
 
@@ -61,15 +67,9 @@ This project uses the TMDB API but is not endorsed or certified by TMDB. All dat
 
 ## Author
 
-- [Mohammed Nasser] - [Your GitHub Profile](https://github.com/MohmmedNasser)
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
+-   Mohammed Nasser - [Your GitHub Profile](https://github.com/MohmmedNasser)
 
 ## Acknowledgments
 
 -   Special thanks to the TMDB team for providing the API.
 -   Powered by Vercel for hosting and deployment.
-
-This project serves as a practical example of integrating a third-party API with React, managing state efficiently, and creating a polished, responsive, and interactive web application.
